@@ -1,0 +1,192 @@
+RUN flag=O0 prog=slow threads=1
+sum: 67108864, time: 0.6050 seconds
+RUN flag=O0 prog=slow threads=2
+sum: 67108864, time: 1.0202 seconds
+RUN flag=O0 prog=slow threads=3
+sum: 67108864, time: 2.6387 seconds
+RUN flag=O0 prog=slow threads=4
+sum: 67108864, time: 2.0257 seconds
+RUN flag=O0 prog=slow threads=5
+sum: 67108864, time: 1.8832 seconds
+RUN flag=O0 prog=slow threads=6
+sum: 67108864, time: 1.9513 seconds
+RUN flag=O0 prog=slow threads=7
+sum: 67108864, time: 1.7909 seconds
+RUN flag=O0 prog=slow threads=8
+sum: 67108864, time: 1.6615 seconds
+RUN flag=O0 prog=medium threads=1
+sum: 67108864, time: 0.1446 seconds
+RUN flag=O0 prog=medium threads=2
+sum: 67108864, time: 0.7573 seconds
+RUN flag=O0 prog=medium threads=3
+sum: 67108864, time: 1.3590 seconds
+RUN flag=O0 prog=medium threads=4
+sum: 67108864, time: 1.6927 seconds
+RUN flag=O0 prog=medium threads=5
+sum: 67108864, time: 1.7915 seconds
+RUN flag=O0 prog=medium threads=6
+sum: 67108864, time: 1.8774 seconds
+RUN flag=O0 prog=medium threads=7
+sum: 67108864, time: 2.8741 seconds
+RUN flag=O0 prog=medium threads=8
+sum: 67108864, time: 2.7947 seconds
+RUN flag=O0 prog=fast threads=1
+sum: 67108864, time: 0.0393 seconds
+RUN flag=O0 prog=fast threads=2
+sum: 67108864, time: 0.0205 seconds
+RUN flag=O0 prog=fast threads=3
+sum: 67108864, time: 0.0140 seconds
+RUN flag=O0 prog=fast threads=4
+sum: 67108864, time: 0.0110 seconds
+RUN flag=O0 prog=fast threads=5
+sum: 67108864, time: 0.0106 seconds
+RUN flag=O0 prog=fast threads=6
+sum: 67108864, time: 0.0129 seconds
+RUN flag=O0 prog=fast threads=7
+sum: 67108864, time: 0.0119 seconds
+RUN flag=O0 prog=fast threads=8
+sum: 67108864, time: 0.0105 seconds
+RUN flag=O1 prog=slow threads=1
+sum: 67108864, time: 0.5957 seconds
+RUN flag=O1 prog=slow threads=2
+sum: 67108864, time: 1.1130 seconds
+RUN flag=O1 prog=slow threads=3
+sum: 67108864, time: 3.0021 seconds
+RUN flag=O1 prog=slow threads=4
+sum: 67108864, time: 2.0798 seconds
+RUN flag=O1 prog=slow threads=5
+sum: 67108864, time: 1.8340 seconds
+RUN flag=O1 prog=slow threads=6
+sum: 67108864, time: 1.7917 seconds
+RUN flag=O1 prog=slow threads=7
+sum: 67108864, time: 1.6249 seconds
+RUN flag=O1 prog=slow threads=8
+sum: 67108864, time: 1.5200 seconds
+RUN flag=O1 prog=medium threads=1
+sum: 67108864, time: 0.1499 seconds
+RUN flag=O1 prog=medium threads=2
+sum: 67108864, time: 0.4737 seconds
+RUN flag=O1 prog=medium threads=3
+sum: 67108864, time: 0.8242 seconds
+RUN flag=O1 prog=medium threads=4
+sum: 67108864, time: 1.1698 seconds
+RUN flag=O1 prog=medium threads=5
+sum: 67108864, time: 1.2013 seconds
+RUN flag=O1 prog=medium threads=6
+sum: 67108864, time: 1.7487 seconds
+RUN flag=O1 prog=medium threads=7
+sum: 67108864, time: 2.3976 seconds
+RUN flag=O1 prog=medium threads=8
+sum: 67108864, time: 2.4153 seconds
+RUN flag=O1 prog=fast threads=1
+sum: 67108864, time: 0.0214 seconds
+RUN flag=O1 prog=fast threads=2
+sum: 67108864, time: 0.0113 seconds
+RUN flag=O1 prog=fast threads=3
+sum: 67108864, time: 0.0076 seconds
+RUN flag=O1 prog=fast threads=4
+sum: 67108864, time: 0.0061 seconds
+RUN flag=O1 prog=fast threads=5
+sum: 67108864, time: 0.0058 seconds
+RUN flag=O1 prog=fast threads=6
+sum: 67108864, time: 0.0065 seconds
+RUN flag=O1 prog=fast threads=7
+sum: 67108864, time: 0.0050 seconds
+RUN flag=O1 prog=fast threads=8
+sum: 67108864, time: 0.0057 seconds
+RUN flag=O2 prog=slow threads=1
+sum: 67108864, time: 0.5911 seconds
+RUN flag=O2 prog=slow threads=2
+sum: 67108864, time: 1.1822 seconds
+RUN flag=O2 prog=slow threads=3
+sum: 67108864, time: 1.6102 seconds
+RUN flag=O2 prog=slow threads=4
+sum: 67108864, time: 1.5723 seconds
+RUN flag=O2 prog=slow threads=5
+sum: 67108864, time: 1.7977 seconds
+RUN flag=O2 prog=slow threads=6
+sum: 67108864, time: 1.7875 seconds
+RUN flag=O2 prog=slow threads=7
+sum: 67108864, time: 1.6233 seconds
+RUN flag=O2 prog=slow threads=8
+sum: 67108864, time: 1.4649 seconds
+RUN flag=O2 prog=medium threads=1
+sum: 67108864, time: 0.1512 seconds
+RUN flag=O2 prog=medium threads=2
+sum: 67108864, time: 0.4426 seconds
+RUN flag=O2 prog=medium threads=3
+sum: 67108864, time: 0.7920 seconds
+RUN flag=O2 prog=medium threads=4
+sum: 67108864, time: 1.0688 seconds
+RUN flag=O2 prog=medium threads=5
+sum: 67108864, time: 1.2183 seconds
+RUN flag=O2 prog=medium threads=6
+sum: 67108864, time: 1.1818 seconds
+RUN flag=O2 prog=medium threads=7
+sum: 67108864, time: 1.5806 seconds
+RUN flag=O2 prog=medium threads=8
+sum: 67108864, time: 1.4413 seconds
+RUN flag=O2 prog=fast threads=1
+sum: 67108864, time: 0.0000 seconds
+RUN flag=O2 prog=fast threads=2
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O2 prog=fast threads=3
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O2 prog=fast threads=4
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O2 prog=fast threads=5
+sum: 67108864, time: 0.0003 seconds
+RUN flag=O2 prog=fast threads=6
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O2 prog=fast threads=7
+sum: 67108864, time: 0.0002 seconds
+RUN flag=O2 prog=fast threads=8
+sum: 67108864, time: 0.0002 seconds
+RUN flag=O3 prog=slow threads=1
+sum: 67108864, time: 0.6018 seconds
+RUN flag=O3 prog=slow threads=2
+sum: 67108864, time: 1.3572 seconds
+RUN flag=O3 prog=slow threads=3
+sum: 67108864, time: 2.7793 seconds
+RUN flag=O3 prog=slow threads=4
+sum: 67108864, time: 1.9199 seconds
+RUN flag=O3 prog=slow threads=5
+sum: 67108864, time: 1.8516 seconds
+RUN flag=O3 prog=slow threads=6
+sum: 67108864, time: 1.7670 seconds
+RUN flag=O3 prog=slow threads=7
+sum: 67108864, time: 1.6109 seconds
+RUN flag=O3 prog=slow threads=8
+sum: 67108864, time: 1.4308 seconds
+RUN flag=O3 prog=medium threads=1
+sum: 67108864, time: 0.1521 seconds
+RUN flag=O3 prog=medium threads=2
+sum: 67108864, time: 0.4383 seconds
+RUN flag=O3 prog=medium threads=3
+sum: 67108864, time: 0.8200 seconds
+RUN flag=O3 prog=medium threads=4
+sum: 67108864, time: 1.0258 seconds
+RUN flag=O3 prog=medium threads=5
+sum: 67108864, time: 1.2895 seconds
+RUN flag=O3 prog=medium threads=6
+sum: 67108864, time: 1.4797 seconds
+RUN flag=O3 prog=medium threads=7
+sum: 67108864, time: 1.6691 seconds
+RUN flag=O3 prog=medium threads=8
+sum: 67108864, time: 1.9925 seconds
+RUN flag=O3 prog=fast threads=1
+sum: 67108864, time: 0.0000 seconds
+RUN flag=O3 prog=fast threads=2
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O3 prog=fast threads=3
+sum: 67108864, time: 0.0000 seconds
+RUN flag=O3 prog=fast threads=4
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O3 prog=fast threads=5
+sum: 67108864, time: 0.0001 seconds
+RUN flag=O3 prog=fast threads=6
+sum: 67108864, time: 0.0002 seconds
+RUN flag=O3 prog=fast threads=7
+sum: 67108864, time: 0.0002 seconds
+RUN flag=O3 prog=fast threads=8
+sum: 67108864, time: 0.0002 seconds

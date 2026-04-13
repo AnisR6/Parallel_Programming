@@ -1,0 +1,48 @@
+RUN prog=slow threads=1
+sum: 67108864, time: 0.6078 seconds
+RUN prog=slow threads=2
+sum: 67108864, time: 1.1547 seconds
+RUN prog=slow threads=3
+sum: 67108864, time: 2.5262 seconds
+RUN prog=slow threads=4
+sum: 67108864, time: 1.9091 seconds
+RUN prog=slow threads=5
+sum: 67108864, time: 1.8245 seconds
+RUN prog=slow threads=6
+sum: 67108864, time: 1.8093 seconds
+RUN prog=slow threads=7
+sum: 67108864, time: 1.6397 seconds
+RUN prog=slow threads=8
+sum: 67108864, time: 1.5541 seconds
+RUN prog=medium threads=1
+sum: 67108864, time: 0.1464 seconds
+RUN prog=medium threads=2
+sum: 67108864, time: 0.7390 seconds
+RUN prog=medium threads=3
+sum: 67108864, time: 1.1471 seconds
+RUN prog=medium threads=4
+sum: 67108864, time: 1.2174 seconds
+RUN prog=medium threads=5
+sum: 67108864, time: 1.4871 seconds
+RUN prog=medium threads=6
+sum: 67108864, time: 1.5942 seconds
+RUN prog=medium threads=7
+sum: 67108864, time: 1.8256 seconds
+RUN prog=medium threads=8
+sum: 67108864, time: 1.5104 seconds
+RUN prog=fast threads=1
+sum: 67108864, time: 0.0401 seconds
+RUN prog=fast threads=2
+sum: 67108864, time: 0.0206 seconds
+RUN prog=fast threads=3
+sum: 67108864, time: 0.0141 seconds
+RUN prog=fast threads=4
+sum: 67108864, time: 0.0110 seconds
+RUN prog=fast threads=5
+sum: 67108864, time: 0.0096 seconds
+RUN prog=fast threads=6
+sum: 67108864, time: 0.0119 seconds
+RUN prog=fast threads=7
+sum: 67108864, time: 0.0108 seconds
+RUN prog=fast threads=8
+sum: 67108864, time: 0.0113 seconds
