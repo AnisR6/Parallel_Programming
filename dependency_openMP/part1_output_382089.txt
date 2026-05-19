@@ -1,0 +1,13 @@
+Compiling exo2_1.c...
+Running with OMP_NUM_THREADS=6
+Normal copy versiontime: 0.000001 seconds
+enhanced copy version time: 0.000278 seconds
+Check: x[10] = 10.000000, y[10] = 10.000000
+
+
+---------------------------
+observation :
+
+the enhanced version prform slower than the normal version, and this is because of the number of N ( only 1024 ),
+OpenMP needs a lot bigger number so it can perform better ( when it stands out the most ), and it is always recommended to add restrict in such loop cases to make sure there will
+be no compilation errors. but in generall case i think OpenMP always handl it

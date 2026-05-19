@@ -1,0 +1,13 @@
+Compiling Part 3...
+Running Part 3 with OMP_NUM_THREADS=6
+Normal version time: 0.151846 seconds
+Parallel over j version time: 0.103132 seconds
+Example check:
+a_normal[10][10][10]   = 75.000000
+a_parallel[10][10][10] = 75.000000
+
+
+
+observation-----------------
+ the results are same, which proves that permuting the J with I was safe :)
+

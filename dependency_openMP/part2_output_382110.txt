@@ -1,0 +1,6 @@
+Compiling Part 2: loop normalization
+Running Part 2 with OMP_NUM_THREADS=6
+Original loop time: 0.000249 seconds
+Normalized loop time: 0.000240 seconds
+Normalized parallel loop time: 0.000381 seconds
+Simplified parallel loop time: 0.000151 seconds
