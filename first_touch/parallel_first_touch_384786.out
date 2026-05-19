@@ -1,0 +1,14 @@
+--- case 1: parallel init ---
+=== first_touch  N=40000  threads=12  mode=GOOD (parallel init) ===
+Memory allocation time  : 0.105581 s
+Matrix initialisation   : 0.842017 s
+Matrix computation time : 0.341513 s
+Sum of matrix elements  : 63998400000000
+Memory deallocation time: 1.019777 s
+--- case 2: serial init ---
+=== first_touch  N=40000  threads=12  mode=BAD (serial init) ===
+Memory allocation time  : 0.104603 s
+Matrix initialisation   : 5.785219 s
+Matrix computation time : 0.646129 s
+Sum of matrix elements  : 63998400000000
+Memory deallocation time: 0.920344 s
