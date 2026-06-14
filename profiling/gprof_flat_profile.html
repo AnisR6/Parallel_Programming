@@ -1,0 +1,62 @@
+
+<div style="padding: 1rem 0;">
+  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; font-size: 12px; color: var(--color-text-secondary);">
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#185FA5;"></span>% time</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#C0DD97;"></span>vranlc — not parallelizable (init)</span>
+  </div>
+  <div style="position: relative; width: 100%; height: 300px;">
+    <canvas id="profileChart" role="img" aria-label="Horizontal bar chart of gprof flat profile. resid 42.83%, psinv 20.84%, vranlc 14.08%, rprj3 9.63%, interp 8.34%, norm2u3 4.31%">resid 42.83%, psinv 20.84%, vranlc 14.08%, rprj3 9.63%, interp 8.34%, norm2u3 4.31%</canvas>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('profileChart'), {
+  type: 'bar',
+  data: {
+    labels: ['resid', 'psinv', 'vranlc', 'rprj3', 'interp', 'norm2u3'],
+    datasets: [
+      {
+        label: '% time',
+        data: [42.83, 20.84, 14.08, 9.63, 8.34, 4.31],
+        backgroundColor: ['#185FA5','#185FA5','#C0DD97','#185FA5','#185FA5','#185FA5'],
+        borderSkipped: false
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (item) => {
+            const meta = [
+              { self: '2.98s', calls: '147' },
+              { self: '1.45s', calls: '168' },
+              { self: '0.98s', calls: '131072' },
+              { self: '0.67s', calls: '147' },
+              { self: '0.58s', calls: '147' },
+              { self: '0.30s', calls: '485' }
+            ][item.dataIndex];
+            return [` % time: ${item.raw}%`, ` self: ${meta.self}`, ` calls: ${meta.calls}`];
+          }
+        }
+      },
+      datalabels: { display: false }
+    },
+    scales: {
+      x: {
+        title: { display: true, text: '% of total runtime', color: '#888780', font: { size: 12 } },
+        grid: { color: 'rgba(136,135,128,0.15)' },
+        max: 50
+      },
+      y: {
+        grid: { display: false },
+        ticks: { font: { family: 'monospace', size: 13 } }
+      }
+    }
+  }
+});
+</script>

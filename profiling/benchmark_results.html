@@ -1,0 +1,92 @@
+
+<div style="padding: 1rem 0;">
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1.5rem;">
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; flex: 1; min-width: 120px;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">Best time</p>
+      <p style="font-size: 22px; font-weight: 500; margin: 0;">2.82s</p>
+      <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">6 threads</p>
+    </div>
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; flex: 1; min-width: 120px;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">Best speedup</p>
+      <p style="font-size: 22px; font-weight: 500; margin: 0;">2.43×</p>
+      <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">6 threads</p>
+    </div>
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem; flex: 1; min-width: 120px;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">Sequential</p>
+      <p style="font-size: 22px; font-weight: 500; margin: 0;">6.86s</p>
+      <p style="font-size: 12px; color: var(--color-text-secondary); margin: 4px 0 0;">baseline</p>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; font-size: 12px; color: var(--color-text-secondary);">
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;"></span>Wall time (s)</span>
+    <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#639922;border:1.5px dashed #639922;background:transparent;"></span>Speedup (right axis)</span>
+  </div>
+
+  <div style="position: relative; width: 100%; height: 280px;">
+    <canvas id="benchChart" role="img" aria-label="Bar and line chart showing wall time and speedup for sequential and OpenMP runs with 1, 2, 6, and 12 threads. Sequential: 6.86s. 1 thread: 6.89s. 2 threads: 4.84s. 6 threads: 2.82s (best). 12 threads: 3.02s.">Sequential 6.86s, 1T 6.89s, 2T 4.84s, 6T 2.82s, 12T 3.02s.</canvas>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+new Chart(document.getElementById('benchChart'), {
+  data: {
+    labels: ['Sequential', '1 thread', '2 threads', '6 threads', '12 threads'],
+    datasets: [
+      {
+        type: 'bar',
+        label: 'Wall time (s)',
+        data: [6.86, 6.89, 4.84, 2.82, 3.02],
+        backgroundColor: ['#B5D4F4','#B5D4F4','#378ADD','#185FA5','#378ADD'],
+        yAxisID: 'y',
+        order: 2
+      },
+      {
+        type: 'line',
+        label: 'Speedup',
+        data: [1.00, 1.00, 1.42, 2.43, 2.27],
+        borderColor: '#639922',
+        backgroundColor: '#639922',
+        borderWidth: 2,
+        borderDash: [5, 4],
+        pointRadius: 5,
+        pointBackgroundColor: '#639922',
+        yAxisID: 'y2',
+        order: 1
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (item) => item.dataset.label + ': ' + item.raw + (item.dataset.label === 'Speedup' ? '×' : 's')
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false } },
+      y: {
+        type: 'linear',
+        position: 'left',
+        title: { display: true, text: 'time (s)', color: '#888780', font: { size: 12 } },
+        grid: { color: 'rgba(136,135,128,0.15)' },
+        min: 0,
+        max: 8
+      },
+      y2: {
+        type: 'linear',
+        position: 'right',
+        title: { display: true, text: 'speedup', color: '#888780', font: { size: 12 } },
+        grid: { display: false },
+        min: 0,
+        max: 3
+      }
+    }
+  }
+});
+</script>
